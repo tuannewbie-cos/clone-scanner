@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "SocialScam Detector - Quét & Nhận Diện Lừa Đảo Profile",
+  "version": "1.0.0",
+  "description": "Chrome Extension nhận diện lừa đảo, giả mạo tài khoản Facebook & Instagram qua tìm kiếm ngược ảnh đại diện và phân tích ngày tạo.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "*://*.instagram.com/*",
+    "http://localhost:5001/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SocialScam Detector",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*"
+      ],
+      "js": ["assets/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
