@@ -144,34 +144,7 @@ socialscam-detector/
    - Click chuột phải vào một liên kết profile Facebook $\rightarrow$ Chọn **"🔍 Kiểm tra lừa đảo với SocialScam"**.
    - Mở Extension lên, hệ thống sẽ tự động điền URL và tiến hành phân tích.
 
----
 
-## 🐙 Các lệnh Git để đẩy Dự án lên GitHub
-
-Dưới đây là các bước chi tiết để đẩy toàn bộ mã nguồn lên tài khoản GitHub của bạn:
-
-```bash
-# 1. Khởi tạo kho lưu trữ Git tại thư mục gốc của dự án
-git init
-
-# 2. Thêm tất cả các file vào khu vực chuẩn bị commit
-git add .
-
-# 3. Tạo commit đầu tiên
-git commit -m "feat: initial commit SocialScam Detector MVP (Chrome Extension MV3 + Backend)"
-
-# 4. Đổi nhánh mặc định thành main
-git branch -M main
-
-# 5. Liên kết tới repository trên GitHub của bạn
-# (Thay đường dẫn URL dưới đây bằng URL repo GitHub bạn vừa tạo)
-git remote add origin https://github.com/<tai-khoan-cua-ban>/socialscam-detector.git
-
-# 6. Đẩy mã nguồn lên GitHub
-git push -u origin main
-```
-
----
 
 ## 🔒 Bản quyền & Giấy phép
 Dự án được phát hành dưới giấy phép **MIT License**. Mọi đóng góp cho cộng đồng an ninh mạng và bảo vệ người dùng trước các hình thức lừa đảo trên không gian mạng đều được hoan nghênh!
